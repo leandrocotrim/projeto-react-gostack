@@ -20,23 +20,21 @@ export const Title = styled.h1`
 export const Form = styled.form<FormProps>`
   display: flex;
   width: 714px;
-  padding-bottom: 120px;
 
   input {
     flex: 1;
     height: 70px;
     padding-top: 0px;
     padding-left: 24px;
-    border: 0;
     border-radius: 5px 0 0 5px;
 
     border: 2px #fff solid;
     border-right: 0px;
 
     ${props =>
-    props.hasError &&
-    css`
-        bottom-color: ${errorColor};
+      props.hasError &&
+      css`
+        border-color: ${errorColor};
       `};
 
     color: ${textColor};
@@ -68,6 +66,7 @@ export const Error = styled.span`
 
 export const Repositories = styled.div`
   width: 714px;
+  padding-top: 120px;
 
   a {
     text-decoration: none;
